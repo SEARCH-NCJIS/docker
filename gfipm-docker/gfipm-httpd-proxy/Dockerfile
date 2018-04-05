@@ -25,7 +25,9 @@ WORKDIR /tmp
 
 #RUN sed -i "s/ServerName portal.ojbc.local:80/ServerName gfipm.search.org:80/g" /etc/apache2/httpd.conf	
 # Copy config files over
-	
+
+EXPOSE 443	
+
 COPY files/shibboleth2.xml /opt/shibboleth-sp/etc/shibboleth/
 COPY files/ssl.conf /etc/apache2/conf.d/
 COPY files/proxy.conf /etc/apache2/conf.d/

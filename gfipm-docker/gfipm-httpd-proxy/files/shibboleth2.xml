@@ -81,7 +81,7 @@ security of your site. Stealing sessions via cookie theft is much easier with th
             
 <!--             Single IDP method: -->
 
-            <SSO entityID="http://hijisFS.hawaii.local/adfs/services/trust">
+            <SSO entityID="https://idp.search.org/idp/shibboleth">
               SAML2 SAML1
              </SSO>
 
