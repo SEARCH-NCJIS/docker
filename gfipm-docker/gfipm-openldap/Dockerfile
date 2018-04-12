@@ -18,8 +18,7 @@
 
 FROM dinkel/openldap
 
-# docker run -d -p 1389:389 --name=pf-openldap -e SLAPD_PASSWORD=password -e SLAPD_DOMAIN=ldap.example.org pf-openldap
-# docker run -d -p 389:389 --name=openldap -e SLAPD_PASSWORD=password -e SLAPD_DOMAIN=search.gfipm.org dinkel/openldap
+# docker run -d --name gfipmldap -p 389:389 -e SLAPD_PASSWORD=password -e SLAPD_DOMAIN=search.gfipm.org gfipm-openldap
 
 
 RUN mkdir -p /etc/ldap.dist/prepopulate
