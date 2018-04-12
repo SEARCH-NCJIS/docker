@@ -46,8 +46,6 @@ services:
       gfipm_nw:    
     ports: 
       - "389:389"
-    web:
-      environment:
-        - SLAPD_PASSWORD=password
-        - SLAPD_PASSWORD=password
-        - SLAPD_DOMAIN=search.gfipm.org
+    environment:
+        SLAPD_PASSWORD: password
+        SLAPD_DOMAIN: search.gfipm.org

@@ -63,7 +63,7 @@
 	</resolver:AttributeDefinition>
 
 	<resolver:DataConnector id="myLDAP" xsi:type="dc:LDAPDirectory"
-		ldapURL="ldap://search.gfipm.org:389" baseDN="ou=people,dc=search,dc=gfipm,dc=org" principal="uid=demoadmin,ou=Office of Information Technology" principalCredential="password">
+		ldapURL="ldap://gfipm-openldap:389" baseDN="ou=people,dc=search,dc=gfipm,dc=org" principal="uid=demoadmin,ou=Office of Information Technology" principalCredential="password">
 		<dc:FilterTemplate> <![CDATA[
   (uid=$resolutionContext.principal) ]]>
   		</dc:FilterTemplate>
