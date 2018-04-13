@@ -29,3 +29,4 @@ COPY files/idp.properties /opt/shibboleth-idp/conf/idp.properties
 COPY files/metadata-providers.xml /opt/shibboleth-idp/conf/metadata-providers.xml
 COPY files/attribute-filter.xml /opt/shibboleth-idp/conf/attribute-filter.xml
 COPY files/attribute-resolver.xml /opt/shibboleth-idp/conf/attribute-resolver.xml
+COPY files/ldap.properties /opt/shibboleth-idp/conf/ldap.properties
