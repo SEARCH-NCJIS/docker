@@ -24,7 +24,7 @@ MAINTAINER Open Justice Broker Consortium "http://www.ojbc.org"
 WORKDIR /tmp
 
 COPY files/idp-signing.* /opt/shibboleth-idp/credentials/
-COPY files/idp-metadata.xml /opt/shibboleth-idp/metadata/idp-metadata.xml
+COPY files/Shibboleth-Metadata.xml /opt/shibboleth-idp/metadata/Shibboleth-Metadata.xml
 COPY files/idp.properties /opt/shibboleth-idp/conf/idp.properties
 COPY files/metadata-providers.xml /opt/shibboleth-idp/conf/metadata-providers.xml
 COPY files/attribute-filter.xml /opt/shibboleth-idp/conf/attribute-filter.xml

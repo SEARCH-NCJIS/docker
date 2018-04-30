@@ -143,7 +143,7 @@ security of your site. Stealing sessions via cookie theft is much easier with th
         <AttributeFilter type="XML" validate="true" path="attribute-policy.xml"/>
 
         <!-- Simple file-based resolver for using a single keypair. -->
-        <CredentialResolver type="File" key="/opt/certs/privateKey.key" certificate="/opt/certs/shib-cert.crt"/>
+        <CredentialResolver type="File" key="/opt/gfipm-certs/sp-Key.key" certificate="/opt/gfipm-certs/sp-cert.crt"/>
 
         <!--
         The default settings can be overridden by creating ApplicationOverride elements (see
