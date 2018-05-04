@@ -23,8 +23,8 @@ MAINTAINER Open Justice Broker Consortium "http://www.ojbc.org"
 
 WORKDIR /tmp
 
-COPY files/JAAS_relational_login.jar /opt/shibboleth-idp/webapp/WEB-INF/lib
-COPY files/mysql-connector-java-8.0.11.jar /opt/shibboleth-idp/webapp/WEB-INF/lib
+COPY files/JAAS_relational_login.jar /opt/shibboleth-idp/edit-webapp/WEB-INF/lib
+COPY files/mysql-connector-java-8.0.11.jar /opt/shibboleth-idp/edit-webapp/WEB-INF/lib
 COPY files/jaas.config /opt/shibboleth-idp/conf/authn
 COPY files/password-authn-config.xml /opt/shibboleth-idp/conf/authn
 COPY files/attribute-resolver.xml /opt/shibboleth-idp/conf/attribute-resolver.xml
