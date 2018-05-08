@@ -51,7 +51,7 @@
     
     <resolver:DataConnector id="mySQL" xsi:type="RelationalDatabase" xmlns="urn:mace:shibboleth:2.0:resolver:dc">
         <ApplicationManagedConnection jdbcDriver="com.mysql.jdbc.Driver"
-        jdbcURL="jdbc:mysql://osbi-ldap:3306/lportal" jdbcUserName="root" jdbcPassword="mysecretpassword" />
+        jdbcURL="jdbc:mysql://osbi-mysql:3306/lportal" jdbcUserName="root" jdbcPassword="mysecretpassword" />
         <QueryTemplate>
             
             <![CDATA[
