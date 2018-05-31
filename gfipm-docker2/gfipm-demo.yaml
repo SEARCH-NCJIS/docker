@@ -1,0 +1,42 @@
+# Docker Compose file that brings up containers necessary for GFIPM demo environment
+# To run:  docker-compose -f gfipm-demo.yaml up -d
+version: '3'
+
+networks:
+  ojbc_nw:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+       subnet: 172.18.0.0/16
+
+services:
+      
+  portal:
+    container_name: portal
+    image: ojbc/gfipm-portal
+    networks:
+      ojbc_nw:    
+    ports: 
+      - "443:443"
+
+  samlds:
+    container_name: samlds
+    image: ojbc/gfipm-samlds
+    networks:
+      ojbc_nw:
+
+  
+  gfipm-idp:
+    container_name: idp
+    image: ojbc/gfipm-idp
+    networks:
+      ojbc_nw:
+
+  ojb-web-util:
+    container_name: ojb-web-util
+    image: ojbc/ojb-web-util
+    networks:
+      ojbc_nw: 
+
