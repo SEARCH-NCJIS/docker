@@ -12,7 +12,6 @@ givenName: Demo
 mail: demoadmin@ojbc.org
 o: Demostate Government
 objectClass: person
-objectClass: demostatePerson
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: top
@@ -20,8 +19,6 @@ ou: Office of Information Technology
 sn: Admin
 uid: demoadmin
 userPassword: password
-ORI: 1234567
-queryUser: true
 
 dn: cn=demouser1,ou=People,dc=search,dc=gfipm,dc=org
 cn: demouser1
@@ -30,7 +27,6 @@ givenName: John
 mail: jwilliams@mcdc.org
 o: Madison County DetentionCenter
 objectClass: person
-objectClass: bookingPerson
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: top
@@ -38,8 +34,6 @@ ou: Booking
 sn: Williams
 uid: jwilliams
 userPassword: password1
-ORI: 1234567
-queryUser: true
 
 dn: cn=demouser2,ou=People,dc=search,dc=gfipm,dc=org
 cn: demouser2
@@ -48,7 +42,6 @@ givenName: Nancy
 mail: nsampson@mcdc.org
 o: Madison County DetentionCenter
 objectClass: person
-objectClass: healthPerson
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: top
@@ -56,8 +49,6 @@ ou: Health
 sn: Sampson
 uid: nsampson
 userPassword: password2
-ORI: 1234567
-queryUser: true
 
 dn: cn=demouser3,ou=People,dc=search,dc=gfipm,dc=org
 cn: demouser3
@@ -66,7 +57,6 @@ givenName: Tony
 mail: tpirro@mcdc.org
 o: Madison County DetentionCenter
 objectClass: person
-objectClass: coPerson
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: top
@@ -74,5 +64,3 @@ ou: CO
 sn: Pirro
 uid: tpirro
 userPassword: password3
-ORI: 1234567
-queryUser: true

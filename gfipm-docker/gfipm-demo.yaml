@@ -1,0 +1,56 @@
+# Docker Compose file that brings up containers necessary for GFIPM demo environment
+# To run:  docker-compose -f gfipm-demo.yaml up -d
+version: '3'
+
+networks:
+  gfipm_nw:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+       subnet: 172.18.0.0/16
+
+services:
+  gfipm-openldap:
+    container_name: gfipm-openldap
+    image: gfipm-openldap
+    build: ./gfipm-openldap
+    networks:
+      gfipm_nw: 
+    environment:
+      - SLAPD_PASSWORD=password
+      - SLAPD_DOMAIN=search.gfipm.org
+    ports:
+     - "389:389"
+      
+  portal:
+    container_name: portal
+    image: ojbc/gfipm-portal
+    build: ./gfipm-portal
+    networks:
+      gfipm_nw:    
+    ports: 
+      - "443:443"
+
+  samlds:
+    container_name: samlds
+    image: ojbc/gfipm-samlds
+    build: ./gfipm-samlds
+    networks:
+      gfipm_nw:
+
+  gfipm-idp:
+    container_name: idp
+    image: ojbc/gfipm-idp
+    build: ./gfipm-idp
+    depends_on:
+      - gfipm-openldap
+    networks:
+      gfipm_nw:
+
+  ojb-web-util:
+    container_name: ojb-web-util
+    image: ojbc/ojb-web-util
+    networks:
+      gfipm_nw: 
